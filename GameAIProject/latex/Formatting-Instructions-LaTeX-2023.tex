@@ -1,0 +1,191 @@
+%File: formatting-instructions-latex-2023.tex
+%release 2023.0
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage{aaai23}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+%\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in}  % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in}  % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+%
+% These are are recommended to typeset listings but not required. See the subsubsection on listing. Remove this block if you don't have listings in your paper.
+\usepackage{newfloat}
+\usepackage{listings}
+\DeclareCaptionStyle{ruled}{labelfont=normalfont,labelsep=colon,strut=off} % DO NOT CHANGE THIS
+\lstset{%
+	basicstyle={\footnotesize\ttfamily},% footnotesize acceptable for monospace
+	numbers=left,numberstyle=\footnotesize,xleftmargin=2em,% show line numbers, remove this entire line if you don't want the numbers.
+	aboveskip=0pt,belowskip=0pt,%
+	showstringspaces=false,tabsize=2,breaklines=true}
+\floatstyle{ruled}
+\newfloat{listing}{tb}{lst}{}
+\floatname{listing}{Listing}
+%
+% Keep the \pdfinfo as shown here. There's no need
+% for you to add the /Title and /Author tags.
+\pdfinfo{
+/TemplateVersion (2023.1)
+}
+
+% DISALLOWED PACKAGES
+% \usepackage{authblk} -- This package is specifically forbidden
+% \usepackage{balance} -- This package is specifically forbidden
+% \usepackage{color (if used in text)
+% \usepackage{CJK} -- This package is specifically forbidden
+% \usepackage{float} -- This package is specifically forbidden
+% \usepackage{flushend} -- This package is specifically forbidden
+% \usepackage{fontenc} -- This package is specifically forbidden
+% \usepackage{fullpage} -- This package is specifically forbidden
+% \usepackage{geometry} -- This package is specifically forbidden
+% \usepackage{grffile} -- This package is specifically forbidden
+% \usepackage{hyperref} -- This package is specifically forbidden
+% \usepackage{navigator} -- This package is specifically forbidden
+% (or any other package that embeds links such as navigator or hyperref)
+% \indentfirst} -- This package is specifically forbidden
+% \layout} -- This package is specifically forbidden
+% \multicol} -- This package is specifically forbidden
+% \nameref} -- This package is specifically forbidden
+% \usepackage{savetrees} -- This package is specifically forbidden
+% \usepackage{setspace} -- This package is specifically forbidden
+% \usepackage{stfloats} -- This package is specifically forbidden
+% \usepackage{tabu} -- This package is specifically forbidden
+% \usepackage{titlesec} -- This package is specifically forbidden
+% \usepackage{tocbibind} -- This package is specifically forbidden
+% \usepackage{ulem} -- This package is specifically forbidden
+% \usepackage{wrapfig} -- This package is specifically forbidden
+% DISALLOWED COMMANDS
+% \nocopyright -- Your paper will not be published if you use this command
+% \addtolength -- This command may not be used
+% \balance -- This command may not be used
+% \baselinestretch -- Your paper will not be published if you use this command
+% \clearpage -- No page breaks of any kind may be used for the final version of your paper
+% \columnsep -- This command may not be used
+% \newpage -- No page breaks of any kind may be used for the final version of your paper
+% \pagebreak -- No page breaks of any kind may be used for the final version of your paperr
+% \pagestyle -- This command may not be used
+% \tiny -- This is not an acceptable font size.
+% \vspace{- -- No negative value may be used in proximity of a caption, figure, table, section, subsection, subsubsection, or reference
+% \vskip{- -- No negative value may be used to alter spacing above or below a caption, figure, table, section, subsection, subsubsection, or reference
+
+\setcounter{secnumdepth}{0} %May be changed to 1 or 2 if section numbers are desired.
+
+% The file aaai23.sty is the style file for AAAI Press
+% proceedings, working notes, and technical reports.
+%
+
+% Title
+
+% Your title must be in mixed case, not sentence case.
+% That means all verbs (including short verbs like be, is, using,and go),
+% nouns, adverbs, adjectives should be capitalized, including both words in hyphenated terms, while
+% articles, conjunctions, and prepositions are lower case unless they
+% directly follow a colon or long dash
+\title{PACMAN \\ Game AI Project Description}
+\author{
+    %Authors
+    % All authors must be in the same font size and format.
+    Dev Patel (dmpatel13), Aditya Karthikeyan (akarthi3), and Jay Joshi (jmjoshi)
+}
+\affiliations{
+    %Afiliations
+    % If you have multiple authors and multiple affiliations
+    % use superscripts in text and roman font to identify them.
+    % For example,
+
+    % Sunil Issar, \textsuperscript{\rm 2}
+    % J. Scott Penberthy, \textsuperscript{\rm 3}
+    % George Ferguson,\textsuperscript{\rm 4}
+    % Hans Guesgen, \textsuperscript{\rm 5}.
+    % Note that the comma should be placed BEFORE the superscript for optimum readability
+
+    Department of Computer Science - CSC584\\
+    North Carolina State University\\
+    % email address must be in roman text type, not monospace or sans serif
+    dmpatel3@ncsu.edu | akarthi3@ncsu.edu | jmjoshi@ncsu.edu
+%
+% See more examples next
+}
+
+% REMOVE THIS: bibentry
+% This is only needed to show inline citations in the guidelines document. You should not need it and can safely delete it.
+\usepackage{bibentry}
+% END REMOVE bibentry
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Introduction}
+PACMAN is a maze action video game developed by Namco and published by Namco in 1980. It is one of the most iconic and influential video games ever. \\ \\
+In the game, the player plays as the main character Pacman, who has the ability to consume dots that are placed throughout a maze. While trying to consume all the dots in a maze, ghost opponents are also present and have the ability to kill Pacman if they touch him, so the player has to also worry about dodging the ghosts while eating the dots. Even though the ghosts can kill him, Pacman does have the ability to defeat the ghosts if he consumes a power pellet placed in the maze. Overall, the main objective of the game is to consume all the dots within the given maze/level while dodging all the ghosts in the level in order to avoid getting killed by the ghosts and beat the game.
+\\ \\
+Even though the ghosts are enemies controlled by AI aimed at getting the player, the game doesn’t have an actual opponent competing against the actual player in terms of getting all the dots in the level. With this project, the project focuses on creating an AI player that acts as an opponent for the main player, with both of them competing for consuming the most dots in the level as a way of introducing a Player vs. AI concept into the Pacman game. \\ \\
+We plan on introducing a multi-agent search agent as an opponent player and letting the agent play the game in an alternate window/environment. The agent tries to beat the game simultaneously as the human player tries to beat the game in a separate window/environment. We then compare the performance of both the players, Human and AI. We do this by comparing the amount of dots consumed, the time taken to beat the game, and the result of each iteration. 
+
+\section{Project Research}
+For this project, we looked into various papers and projects for inspiration. PACMAN is an interesting game, in that it provides us with a fairly large field to play with. We can try various AI agents for the player character to compare the differences in the performances. We can also try different AI algorithms for the ‘ghost’ character behaviors. This helps us observe how the ‘Pacman’ character adjusts its performance to deal with new constraints imposed by different ghost behaviors. \\ \\
+The base game of this project is from Giant Jenks’ licensed collection of free Python games intended for education and fun. Some of the base game logic and layouts are from ‘The PACMAN projects’ lectures from UC Berkeley.  \\ \\
+The UC Berkeley lectures have great resources to read on implementations of different types of AI agents like search agents, multi-agent search agents, and deep q-learning agents. We decided to use multi-agent search agents, particularly the Minimax agent and Alpha-Beta pruning Minimax agent. Since the game environment of ‘PACMAN’ has multiple agents operating on it and there are scenarios that require coordination between these agents for the player character to survive. The player character has to keep track of ghost characters’ positions and also focus on consuming the dots in the layout. \\ \\
+The multi-agent search agents also provide better scalability, adaptability, and robustness.  It also allows us to try different layouts of varying sizes and these agents are better to compare performances in these different environments. \\ \\
+We also read through research papers like Brennan's Minimax algorithm and alpha-beta pruning and Dan Klein's Teaching Introductory Artificial Intelligence with Pac-Man to understand these algorithms to help with our implementations. 
+
+\section{Problem Environment}
+The Pacman game was made in Python, and the existing code for the game has implementation for the main Pacman player and behavior for consuming the dots in the level along with the AI behavior of the enemy ghosts.\\ \\ 
+ Using the existing Pacman game code in Python, the project will primarily focus on adding additional code for adding an opponent player in the game in addition to adding code for implementing the AI behavior of the opponent player. In addition, even though the ghosts have random wandering movement in the game, the AI used for the ghosts themselves isn’t much and doesn’t really make decisions on what path to take as the ghosts only decide what path to take once they’ve collided with a wall in the maze. \\ \\ 
+Because of this, the AI used for the ghosts has the possibility for further improvements to help make the movement of the ghosts more unpredictable and perhaps more challenging for the player, which could be achieved through using path-finding algorithms. \\ \\ 
+Additionally, code could also be added so that as the player beats the level each time, the AI behavior of the ghosts and opponent player increases and becomes more intense as a way of slowly increasing the game’s difficulty with each playthrough the player experiences.
+
+
+\section{AI Implementation Approach}
+Since the AI opponent player is meant to play similar to an actual human player in the game, the AI opponent will need to have behavior for moving around in the maze along with consuming the dots in the level. The consuming dots behavior for the AI opponent will be the same as the existing consuming dots behavior for the main player, and the AI player will also be placed into a different maze from the human player’s maze, but both mazes will have the same layout. Since the main player and AI opponent will be competing to see which one can consume the all dots in the maze first, there will have to be additional trackers for the number of dots consumed by each player respectively along with the number of existing dots in each maze. For handling the movement behavior of the AI opponent player, the minimax algorithm will serve as the base algorithm, with the alpha-beta pruning algorithm being a second algorithm used to compare with the base algorithm.
+\\ \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{LaTeX/minimax.png}
+    \caption{Minimax Algorithm Search Tree Example}
+    \label{fig:enter-label}
+\end{figure}
+The minimax algorithm is a game decision-making algorithm that focuses on finding the “best move for a player in a situation where the other player is also playing optimally” (Brennan). The algorithm will examine all possible game states and generate a search tree that assigns a score to each node in the tree. Afterwards, the algorithm represents the root node as a max node that looks for the max value from its children, with the nodes at the next depth being represented as min nodes looking for the min value from its children (Brennan). With each increasing depth in the tree, the nodes alternate between being represented as max and min nodes until reaching the max depth of the tree, where the algorithm then goes through the tree using the minimax rule until reaching a final value for the root node of the tree, as shown in Figure 1. 
+\\ \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{LaTeX/alphabeta.png}
+    \caption{Alpha-Beta Algorithm Search Tree Example}
+    \label{fig:enter-label}
+\end{figure}
+The alpha-beta pruning algorithm is essentially the same thing as the minimax algorithm, however it focuses on trying to “improve the efficiency of the minimax algorithm” by reducing the number of nodes necessary to search through in a given search tree, as seen in Figure 2 (Brennan). With this algorithm, it searches through game states in a similar fashion as the minimax algorithm, but it uses alpha and beta parameters that are initialized to negative and positive infinity respectively and updated when comparing the values of nodes in the tree. When comparing the values of a node with the parameters, if the current alpha value is greater than the current beta value, then the branch of the tree with the node can be ignored because that branch is guaranteed to be worse than a branch that’s already been evaluated (Brennan). Even though the alpha-beta pruning can be effective with simplifying the minimax algorithm, its effectiveness is dependent on how nodes in a search tree are organized.
+\\ \\
+To implement the minimax algorithm for the AI player’s movement, the possible game states/positions for the AI player to move to relative to the ghosts present in the maze will be recorded along with the utility value for the agent within each state. Using the generated states, the search tree will then be generated and searched through using the minimax rule in order to determine the best course of action for the AI player to take when navigating the maze. Implementing the alpha-beta pruning algorithm for the AI player’s movement will essentially be the same implementation as done with the minimax algorithm, but alpha and beta variables will be incorporated and kept tracked during the search process with the generated search tree as a way of speeding up the search process for the AI player movement.
+
+
+\section{AI Evaluation Methods}
+Since the AI opponent is meant to play similar to an actual human player, the AI opponent will mainly be trying to consume as many dots as possible and also try to avoid getting hit by any of the ghosts in the level. Because the AI opponent has similar objectives with the human player, some metrics that could be used for measuring the AI’s performance could be the number of consumed dots and number of deaths. Because the AI opponent is trying to consume more dots compared to the actual player, measuring the number of consumed dots can help determine if the AI is getting about the same number of dots as the main player, or higher/lower than the main player’s amount of consumed dots. To also help with this, measuring the total time for completing the level by consuming all the dots in a single-agent environment could be a useful metric for determining how well the AI performs when it’s playing by itself as a way of indicating its’ performance compared to an average player’s performance in the game. 
+\\ \\
+Furthermore, measuring the number of victories against a human opponent over a set number of trials could be another metric used for determining how well the AI opponent does against a human player. In addition, measuring the number of deaths helps indicate how often the AI opponent is hitting the ghosts and therefore help determine if the AI can easily adapt well to the movement of the ghosts or if it struggles with doing so. Overall, using these metrics can provide useful insight into the AI’s performance compared with an average player’s performance in the game, which can be helpful for determining what needs to be changed with the AI behavior in order to get the AI player to have an equal/similar performance to an average player in the game.
+
+
+\section{Project Significance}
+By adding an AI opponent player into the game, the project aims to achieve an enhanced single-player experience for the Pacman game by adding challenge for the main player through the AI opponent. Furthermore, the Pacman game environment is a multi-agent, dynamic and stochastic environment, so our solution to this problem might have applications to other domains such as autonomous vehicles, robotics or other video games consisting of similar environments.
+
+\begin{thebibliography}{00}
+	\bibitem{b1} Brennan, A. 2023. Minimax algorithm and alpha-beta pruning. https://medium.com/@aaronbrennan.brennan/minimax-algorithm-and-alpha-beta-pruning-646beb01566c. 
+ \bibitem{b2} UC Berkeley. The Pac-Man Projects. http://ai.berkeley.edu/project\_overview.html.
+ \bibitem{b3} DeNero, J., \& Klein, D. (2010). Teaching Introductory Artificial Intelligence with Pac-Man. Proceedings of the AAAI Conference on Artificial Intelligence, 24(3), 1885-1889. https://doi.org/10.1609/aaai.v24i3.18829
+\end{thebibliography}
+\end{document}
